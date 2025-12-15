@@ -1,0 +1,99 @@
+body {
+  margin: 0;
+  background: #e6dccf;
+  font-family: "Libre Baskerville", serif;
+  color: #111;
+}
+
+.book-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.book {
+  width: 100%;
+  max-width: 620px;
+}
+
+/* PAGE AREA */
+.page-wrapper {
+  position: relative;
+  background: #f7f1e6;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  overflow: hidden;
+}
+
+/* PAGE */
+.page {
+  padding: 50px 40px;
+  min-height: 440px;
+  background: #f7f1e6;
+  position: relative;
+  z-index: 1;
+}
+
+/* PAGE CONTENT */
+h1, h2 {
+  font-family: "Playfair Display", serif;
+}
+
+.cover {
+  text-align: center;
+}
+
+.cover img {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.subtitle {
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* PAGE CURL ELEMENT */
+.page-curl {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 100%;
+  background: linear-gradient(
+    to left,
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.05),
+    transparent
+  );
+  transform-origin: right center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* CURL ANIMATION */
+.page-wrapper.curling .page-curl {
+  animation: curl 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes curl {
+  0% {
+    width: 0;
+    transform: skewY(0deg);
+  }
+  50% {
+    width: 120px;
+    transform: skewY(-8deg);
+  }
+  100% {
+    width: 0;
+    transform: skewY(0deg);
+  }
+}
+
+/* CONTROLS */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  font-size: 0.9rem;
+}
