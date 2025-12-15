@@ -79,10 +79,10 @@ const pages = [
     You never asked to be thanked.
 
     You adjusted your life so I could live mine freely.
-    ou carried worries silently so I could sleep peacefully.
+    You carried worries silently so I could sleep peacefully.
 
     There were days you were tired, but you still showed up.
-    There were moments you were hurting, but you still smiled.
+    There were moments you were hurt, but you still smiled.
 
     I watched all of this quietly.
     I understood it fully only much later.
